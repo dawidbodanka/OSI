@@ -10,6 +10,24 @@
     
 </head>
   <body>
-    
+    <div class="webchat" style="height: 600px; width: 400px;">
+  <iframe
+    style="height: 100%; width: 100%; border: none;"
+    srcdoc='
+    <!doctype html>
+    <html lang="en">
+      <head></head>
+      <body>
+        <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+        <script defer>
+          window.botpress.on("webchat:ready", () => {
+            botpress.open();
+          });
+          // Paste your Webchat config snippet here
+        </script>
+      </body>
+    </html>'
+  ></iframe>
+</div>
   </body>
 </html>
